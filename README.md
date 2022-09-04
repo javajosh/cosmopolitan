@@ -1,3 +1,34 @@
+# Fork notes
+
+[This fork](https://github.com/javajosh/cosmopolitan) 
+of @jart's excellent [redbean](https://redbean.dev/) 
+is the starting point for 
+[WebSocket support](https://github.com/jart/cosmopolitan/issues/439)
+that will be merged back in. 
+
+WebSocket resources:
+  1. [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) locally in both 
+     [plaintext](./rfc6455.txt) and 
+     [html](./RFC%206455%20The%20WebSocket%20Protocol.html).
+  1. An [example WebSocket server in C#](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server) hosted on MDN
+
+## Fork Todo
+  1. Learn how the ordinary HTTP BTD loop works in `cosmopolitan`/`redbean`.
+  1. Use that loop to incrementally add WebSocket support:
+     1. Handshake
+     1. Frames
+     1. Send/Recieve
+     1. Closing
+
+Meanwhile: I must learn the C toolchain on 
+([Ubuntu 22](https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668))
+Linux and the code itself. This is only possible because of 
+the minimalist style in which @jart wrote `redbean`.
+
+
+--------------------------
+
+
 ![Cosmopolitan Honeybadger](usr/share/img/honeybadger.png)
 
 [![build](https://github.com/jart/cosmopolitan/actions/workflows/build.yml/badge.svg)](https://github.com/jart/cosmopolitan/actions/workflows/build.yml)
